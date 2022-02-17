@@ -25,7 +25,8 @@ const tabs = [];
 function openTab(e){
 	console.log('[ openTab ] opening tab...');
 	try {
-		const tab = window.open('http://127.0.0.1:5500/index.html', '_blank');
+		const url = window.location.href;
+		const tab = window.open(url, '_blank');
 		tabs.push( tab )
 	} catch( err ){
 		console.log('[ openTab ERROR ]', err,)
